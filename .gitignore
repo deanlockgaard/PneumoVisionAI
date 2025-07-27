@@ -1,0 +1,220 @@
+# PneumoVisionAI - Medical Image Classification Project
+# Python virtual environments
+venv/
+env/
+ENV/
+.venv/
+.env/
+virtualenv/
+pipenv/
+.Python
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyTorch specific
+*.pth
+*.pt
+*.ckpt
+*.pkl
+checkpoint/
+checkpoints/
+
+# Dataset - IMPORTANT: Don't commit medical data
+data/test/
+data/train/
+data/val/
+*.jpeg
+*.jpg
+*.png
+*.dcm
+*.nii
+*.nii.gz
+
+# Model outputs and logs
+models/
+saved_models/
+runs/
+logs/
+tensorboard/
+tb_logs/
+*.log
+wandb/
+mlruns/
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+*-checkpoint.ipynb
+
+# IDE specific files
+# VSCode
+.vscode/
+*.code-workspace
+.history/
+
+# PyCharm
+.idea/
+*.iml
+*.iws
+out/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+.envrc
+secrets/
+config/secrets.yaml
+
+# Coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Profiling
+*.prof
+*.lprof
+.prof/
+
+# Documentation builds
+docs/_build/
+docs/_generated/
+site/
+
+# Package managers
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Experiments and outputs
+experiments/
+outputs/
+results/
+figures/
+plots/
+*.csv
+*.xlsx
+*.json
+!requirements.txt
+!setup.json
+!config.json
+
+# Temporary files
+*.tmp
+*.temp
+tmp/
+temp/
+
+# Archive files
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+
+# Specific to medical imaging projects
+dicom_cache/
+nifti_cache/
+preprocessed/
+augmented/
+
+# Large model files (if using git-lfs, may track differently)
+*.h5
+*.hdf5
+*.weights
+
+# Debugging
+*.stackdump
+core.*
+pdb.set_trace()
+
+# Custom
+scratch/
+old/
+backup/
