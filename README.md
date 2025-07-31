@@ -20,10 +20,10 @@ PneumoVisionAI uses convolutional neural networks (CNNs) to automatically detect
 ```
               precision    recall  f1-score   support
 
-    NORMAL       0.7816    0.8718    0.8242       234
-    PNEUMONIA    0.9174    0.8538    0.8845       390
+      NORMAL     0.7816    0.8718    0.8242       234
+   PNEUMONIA     0.9174    0.8538    0.8845       390
 
-  accuracy                           0.8606       624
+    accuracy                         0.8606       624
    macro avg     0.8495    0.8628    0.8544       624
 weighted avg     0.8665    0.8606    0.8619       624
 
