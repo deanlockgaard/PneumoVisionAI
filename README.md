@@ -3,13 +3,84 @@
 
 **AI-Powered Pneumonia Detection from Chest X-rays**
 
-A deep learning project using PyTorch to classify chest X-ray images for pneumonia detection. This project demonstrates computer vision techniques, medical image analysis, and responsible AI practices in healthcare applications.
+PneumoVisionAI is a deep learning project using PyTorch to classify chest X-ray images for pneumonia detection. This project demonstrates computer vision techniques, medical image analysis, and responsible AI practices in healthcare applications.
 
 ---
 
 ## 🎯 Project Overview
 
 PneumoVisionAI uses convolutional neural networks (CNNs) to automatically detect pneumonia in chest X-ray images. The system is trained on the [Kaggle Chest X-ray Images (Pneumonia)](https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia) dataset and achieves high accuracy in distinguishing between normal and pneumonia-affected X-rays.
+
+---
+
+## 📊 Model Performance
+
+### Classification Report (Test Set)
+
+```
+              precision    recall  f1-score   support
+
+    NORMAL       0.7816    0.8718    0.8242       234
+    PNEUMONIA    0.9174    0.8538    0.8845       390
+
+  accuracy                           0.8606       624
+   macro avg     0.8495    0.8628    0.8544       624
+weighted avg     0.8665    0.8606    0.8619       624
+
+Accuracy: 0.8606
+
+Confusion Matrix:
+[[204  30]
+ [ 57 333]]
+```
+
+### Key Clinical Metrics
+
+```
+Sensitivity (Pneumonia Recall): 0.8538
+Specificity (Normal Recall):    0.8718
+ROC-AUC:                        0.9374
+```
+
+---
+
+## 🏆 Key Accomplishments
+
+- **Pipeline** - Set up a robust data pipeline for image data.
+- **Convolutional Neural Network (CNN) Training** - Built and trained both a baseline and a powerful pre-trained CNN using PyTorch.
+- **Workflow** - Implemented a full training and evaluation workflow.
+- **Performance Analysis** - Achieved a strong final performance and analyzed the results.
+
+---
+
+## 💡 Key Concepts & Implementation
+
+1. **Deep Learning Architectures (PyTorch, CNNs, Transfer Learning)**
+  - **PyTorch** - For model definition, training, and evaluation.
+  - **Custom CNNs & Pretrained Models** - Implementing and adapting architectures like ResNet-50 using transfer learning, with custom layers and classifier heads.
+  - **Device Management** - Leveraging GPU, Apple’s MPS, or CPU for computation.
+
+2. **Medical Image Data Engineering & Augmentation**
+  - **Advanced Data Handling** - Creation of custom PyTorch Datasets for class-balanced sampling, caching, and on-the-fly augmentation.
+  - **Albumentations** - Powerful image augmentation/transformation library (with handling for warnings and correct transform setup for medical data).
+
+3. **Model Evaluation & Clinical Metrics**
+  - **Performance Metrics** - Calculation and correct clinical interpretation of sensitivity, specificity, ROC-AUC, f1-score, and confusion matrices.
+  - **Visualization** - Publication-grade metrics visualization (ROC curves, confusion matrices with seaborn/matplotlib).
+
+4. **Experiment Management & Logging**
+  - **TensorBoard** - Logging scalar metrics and visualizing training progress.
+  - **Matplotlib/Seaborn** - For static visualization of learning curves and performance.
+  - **Command-line Interface (argparse)** - For configurable training and evaluation runs, supporting reproducibility.
+
+5. **Data Science & Scientific Python Ecosystem**
+  - **NumPy / pandas** - For array and metric calculations.
+  - **scikit-learn** - For `classification_report`, confusion matrix, ROC-AUC, and advanced metrics.
+  - **tqdm** - For live progress bars during long-running operations.
+
+6. **Project Structure & Workflow**
+  - **Modular Codebase** - Using separate files/modules for dataset, models, training, and evaluation.
+  - **Output Management** - Saving models, logs, plots, and text metrics for later analysis or publication.
 
 ---
 
@@ -93,26 +164,16 @@ PneumoVisionAI/
 
 ---
 
-## 🔧 Technologies Used
+## 🔧 Technologies
 
-- **PyTorch** – Deep learning framework  
-- **Albumentations** – Advanced image augmentation  
-- **OpenCV** – Image processing  
-- **Matplotlib / Seaborn** – Visualization  
-- **NumPy / Pandas** – Data manipulation  
-- **TensorBoard** – Training visualization  
-
----
-
-## 📊 Model Performance
-
-> _To be updated after training_
-
-- **Accuracy:**  
-- **Precision:**  
-- **Recall:**  
-- **F1-Score:**  
-- **AUC-ROC:**  
+- **PyTorch** - The core deep learning framework used to build and train the neural network models.
+- **Albumentations** - A fast and powerful library for advanced image augmentation.
+- **Scikit-learn** - Used for calculating and reporting key performance metrics like the classification report, confusion matrix, and AUC score.
+- **NumPy** - The fundamental package for numerical operations and data manipulation.
+- **Matplotlib & Seaborn** - Used to generate visualizations of the training history, confusion matrix, and ROC curve.
+- **TensorBoard** - For real-time logging and visualization of the model's training progress.
+- **Argparse** - Used to create the command-line interface for the training and evaluation scripts.
+- **tqdm** - For displaying clean, informative progress bars during training and evaluation.
 
 ---
 
@@ -137,6 +198,16 @@ Visualize training progress with TensorBoard:
 ```bash
 tensorboard --logdir logs/
 ```
+
+---
+
+## 🧭 Project Roadmap
+
+- **Data** - Add more data sources (e.g., from NIH or RSNA) to increase diversity and reduce overfitting
+- **Models** - Try DenseNet121 or Vision Transformers (via timm library) for potentially higher accuracy on X-rays. EfficientNet is efficient for deployment.
+- **Fine-tuning** - Train with freeze_layers=True first, then unfreeze and train with lower LR (e.g., 1e-4) for better results.
+- **Interpretability** - Add Grad-CAM or similar for visualizing what the model focuses on in X-rays (e.g., lung consolidations).
+- **Deployment** - Once trained, export to ONNX for inference.
 
 ---
 

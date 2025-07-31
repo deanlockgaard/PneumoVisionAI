@@ -297,7 +297,7 @@ def create_data_loaders(
     batch_size: int = 32,
     img_size: int = 224,
     augmentation_level: str = 'medium',
-    num_workers: int = 4,
+    num_workers: int = 0,
     use_weighted_sampling: bool = True,
     cache_images: bool = False,
     pin_memory: bool = True
