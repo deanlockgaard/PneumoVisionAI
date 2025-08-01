@@ -15,15 +15,21 @@ PneumoVisionAI uses convolutional neural networks (CNNs) to automatically detect
 
 ## 🖼️ Visualizations
 
-#### Training Batch Sample - Augmented X-rays with noise artifacts and rotations
+### Training Batch Sample - Augmented X-rays with noise artifacts and rotations
 ![alt text](images/train_batch_sample.png "Augmented X-rays")
 
-#### Validation Batch Sample - Unaugmented X-rays labeled NORMAL
+### Validation Batch Sample - Unaugmented X-rays labeled NORMAL
 ![alt text](images/val_batch_sample.png "Unaugmented X-rays")
 
 ---
 
 ## 📊 Model Performance
+
+### Training and Validation Over 30 Epochs - Loss & Accuracy
+![alt text](images/resnet50_training_history.png "Loss & Accuracy")
+
+### ROC & AUC Results
+![alt text](images/resnet50_roc_curve.png "ROC & AUC Results")
 
 ### Classification Report (Test Set)
 
