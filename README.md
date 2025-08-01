@@ -53,34 +53,34 @@ ROC-AUC:                        0.9374
 
 ---
 
-## 💡 Key Concepts & Implementation
+## 💡 Key Concepts & Implementations
 
-1. **Deep Learning Architectures (PyTorch, CNNs, Transfer Learning)**
-  - **PyTorch** - For model definition, training, and evaluation.
-  - **Custom CNNs & Pretrained Models** - Implementing and adapting architectures like ResNet-50 using transfer learning, with custom layers and classifier heads.
-  - **Device Management** - Leveraging GPU, Apple’s MPS, or CPU for computation.
+- **Deep Learning Architectures (PyTorch, CNNs, Transfer Learning)**
+    - **PyTorch** - For model definition, training, and evaluation.
+    - **Custom CNNs & Pretrained Models** - Implementing and adapting architectures like ResNet-50 using transfer learning, with custom layers and classifier heads.
+    - **Device Management** - Leveraging GPU, Apple’s MPS, or CPU for computation.
 
-2. **Medical Image Data Engineering & Augmentation**
-  - **Advanced Data Handling** - Creation of custom PyTorch Datasets for class-balanced sampling, caching, and on-the-fly augmentation.
-  - **Albumentations** - Powerful image augmentation/transformation library (with handling for warnings and correct transform setup for medical data).
+- **Medical Image Data Engineering & Augmentation**
+    - **Advanced Data Handling** - Creation of custom PyTorch Datasets for class-balanced sampling, caching, and on-the-fly augmentation.
+    - **Albumentations** - Powerful image augmentation/transformation library (with handling for warnings and correct transform setup for medical data).
 
-3. **Model Evaluation & Clinical Metrics**
-  - **Performance Metrics** - Calculation and correct clinical interpretation of sensitivity, specificity, ROC-AUC, f1-score, and confusion matrices.
-  - **Visualization** - Publication-grade metrics visualization (ROC curves, confusion matrices with seaborn/matplotlib).
+- **Model Evaluation & Clinical Metrics**
+    - **Performance Metrics** - Calculation and correct clinical interpretation of sensitivity, specificity, ROC-AUC, f1-score, and confusion matrices.
+    - **Visualization** - Publication-grade metrics visualization (ROC curves, confusion matrices with seaborn/matplotlib).
 
-4. **Experiment Management & Logging**
-  - **TensorBoard** - Logging scalar metrics and visualizing training progress.
-  - **Matplotlib/Seaborn** - For static visualization of learning curves and performance.
-  - **Command-line Interface (argparse)** - For configurable training and evaluation runs, supporting reproducibility.
+- **Experiment Management & Logging**
+    - **TensorBoard** - Logging scalar metrics and visualizing training progress.
+    - **Matplotlib/Seaborn** - For static visualization of learning curves and performance.
+    - **Command-line Interface (argparse)** - For configurable training and evaluation runs, supporting reproducibility.
 
-5. **Data Science & Scientific Python Ecosystem**
-  - **NumPy / pandas** - For array and metric calculations.
-  - **scikit-learn** - For `classification_report`, confusion matrix, ROC-AUC, and advanced metrics.
-  - **tqdm** - For live progress bars during long-running operations.
+- **Data Science & Scientific Python Ecosystem**
+    - **NumPy / pandas** - For array and metric calculations.
+    - **scikit-learn** - For `classification_report`, confusion matrix, ROC-AUC, and advanced metrics.
+    - **tqdm** - For live progress bars during long-running operations.
 
-6. **Project Structure & Workflow**
-  - **Modular Codebase** - Using separate files/modules for dataset, models, training, and evaluation.
-  - **Output Management** - Saving models, logs, plots, and text metrics for later analysis or publication.
+- **Project Structure & Workflow**
+    - **Modular Codebase** - Using separate files/modules for dataset, models, training, and evaluation.
+    - **Output Management** - Saving models, logs, plots, and text metrics for later analysis or publication.
 
 ---
 
@@ -129,14 +129,14 @@ Your `./data/` directory should look like:
 ```
 ./data/
 ├── train/
-│   ├── NORMAL/       # 1,341 images
-│   └── PNEUMONIA/    # 3,875 images
+│   ├── NORMAL/
+│   └── PNEUMONIA/
 ├── val/
-│   ├── NORMAL/       # 8 images
-│   └── PNEUMONIA/    # 8 images
+│   ├── NORMAL/
+│   └── PNEUMONIA/
 └── test/
-    ├── NORMAL/       # 234 images
-    └── PNEUMONIA/    # 390 images
+    ├── NORMAL/
+    └── PNEUMONIA/
 ```
 
 ---
@@ -155,7 +155,8 @@ PneumoVisionAI/
 │   └── exploration.ipynb     # Jupyter notebooks for analysis
 ├── models/                   # Saved model checkpoints (gitignored)
 ├── logs/                     # Training logs (gitignored)
-├── figures/                  # Generated visualizations
+├── images/                   # Generated visualizations
+├── figures/                  # Generated visualizations (gitignored)
 ├── data/                     # Dataset directory (gitignored)
 ├── requirements.txt          # Python dependencies
 ├── .gitignore                # Git ignore file

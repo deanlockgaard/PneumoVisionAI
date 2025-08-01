@@ -45,9 +45,9 @@ checkpoints/
 data/test/
 data/train/
 data/val/
-*.jpeg
-*.jpg
-*.png
+#*.jpeg
+#*.jpg
+#*.png
 *.dcm
 *.nii
 *.nii.gz
