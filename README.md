@@ -240,8 +240,9 @@ This project is licensed under the **MIT License** – see the [LICENSE](LICENSE
 
 ---
 
-## 🙏 Acknowledgments
+## 🙏 Credits
 
+- Developed by Dean Lockgaard
 - **Dataset**: [Chest X-Ray Images (Pneumonia)](https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia) on Kaggle  
 - **Original Source**:  
   Kermany et al. “Identifying Medical Diagnoses and Treatable Diseases by Image-Based Deep Learning.” _Cell_, 2018.
